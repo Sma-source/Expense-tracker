@@ -9,14 +9,14 @@ export const AddTransaction = () => {
       <form>
         <div className="form-control">
           <label htmlFor="text">Text</label>
-          <input type="text" name="" placeholder="Enter text..." />
+          <input type="text" value={text} placeholder="Enter text..." />
         </div>
         <div className="form-control">
           <label htmlFor="mount">
             Amount <br />
             (negative - expense, positive + income)
           </label>
-          <input type="number" name="" placeholder="Enter a number..." />
+          <input type="number" value={amount} placeholder="Enter a number..." />
         </div>
         <button className="btn">Add transaction</button>
       </form>
