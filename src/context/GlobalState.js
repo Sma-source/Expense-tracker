@@ -10,3 +10,7 @@ const initialState = {
     { id: 4, text: "Amazon Prime", amount: -5.99 },
   ],
 };
+
+// Create Context
+
+export const GlobalContext = createContext(initialState);
