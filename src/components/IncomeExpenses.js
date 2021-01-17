@@ -27,7 +27,7 @@ export const IncomeExpenses = () => {
       </div>
       <div>
         <h4>Expense</h4>
-        <p className="money minus">{expense.toFixed(2)}</p>
+        <p className="money minus">{expense}</p>
       </div>
     </div>
   );
