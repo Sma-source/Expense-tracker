@@ -4,12 +4,7 @@ import AppReducer from "./AppReducer";
 // Init state
 
 const initialState = {
-  transactions: [
-    { id: 1, text: "Book", amount: -15 },
-    { id: 2, text: "Gloves", amount: -10.99 },
-    { id: 3, text: "Salary", amount: 1000.99 },
-    { id: 4, text: "Amazon Prime", amount: 5.99 },
-  ],
+  transactions: [],
 };
 
 // Create Context
