@@ -7,14 +7,17 @@ export const AddTransaction = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const newTransaction = {
-      id: Math.floor(Math.random() * 100000000),
-      text,
-      amount: +amount,
-    };
-    addTransaction(newTransaction);
-    setText("");
-    setAmount(0);
+    if (text && amount) {
+      const newTransaction = {
+        id: Math.floor(Math.random() * 100000000),
+        text,
+
+        amount: +amount,
+      };
+      addTransaction(newTransaction);
+      setText("");
+      setAmount(0);
+    }
   };
   return (
     <>
@@ -27,7 +30,6 @@ export const AddTransaction = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Enter text..."
-            required
           />
         </div>
         <div className="form-control">
