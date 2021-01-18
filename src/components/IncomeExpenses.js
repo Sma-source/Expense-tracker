@@ -37,6 +37,14 @@ export const IncomeExpenses = () => {
     <>
       <div className="inc-exp-container">
         {income > 0 || expense > 0 ? <Pie data={data} /> : ""}
+        {/* <div>
+          <h4>Income</h4>
+          <p className="money plus">{income} </p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p className="money minus">{expense}</p>
+        </div> */}
       </div>
     </>
   );
