@@ -8,6 +8,13 @@ exports.getTransactions = (req, res, next) => {
 // @desc Add transaction
 // @route POST /api/version1/transactions
 // @acces Public
-exports.addTransactions = (req, res, next) => {
+exports.addTransaction = (req, res, next) => {
   res.send("Add Transaction");
+};
+
+// @desc Delete transaction
+// @route DELETE /api/version1/transactions//:id
+// @acces Public
+exports.deleteTransaction = (req, res, next) => {
+  res.send("Delete Transaction");
 };
