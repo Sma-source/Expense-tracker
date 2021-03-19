@@ -3,8 +3,21 @@ const Transaction = require("../models/Transaction");
 // @desc get all transactions
 // @route GET /api/version1/transactions
 // @acces Public
-exports.getTransactions = (req, res, next) => {
-  res.send("Get Transactions");
+exports.getTransactions = async (req, res, next) => {
+  try {
+    const transactions = await Transaction.find();
+
+    return res.status(200).json({
+      success: true,
+      count: transactions.length,
+      data: transactions,
+    });
+  } catch (error) {
+    return res.send(500).json({
+      success: false,
+      error: "Server Error",
+    });
+  }
 };
 
 // @desc Add transaction
