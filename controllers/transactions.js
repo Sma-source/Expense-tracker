@@ -23,8 +23,17 @@ exports.getTransactions = async (req, res, next) => {
 // @desc Add transaction
 // @route POST /api/version1/transactions
 // @acces Public
-exports.addTransaction = (req, res, next) => {
-  res.send("Add Transaction");
+exports.addTransaction = async (req, res, next) => {
+  try {
+    const { text, amount } = req.body;
+
+    const transaction = await Transaction.create(req.body);
+
+    return res.status(201).json({
+      success: true,
+      data: transaction,
+    });
+  } catch (error) {}
 };
 
 // @desc Delete transaction
