@@ -18,7 +18,7 @@ const AppReducer = (state, action) => {
         ...state,
         transactions: [...state.transactions, action.payload],
       };
-    case "TRANSACTIONS_ERROR":
+    case "TRANSACTION_ERROR":
       return {
         ...state,
         error: action.payload,
