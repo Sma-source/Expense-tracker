@@ -49,7 +49,13 @@ export const GlobalProvider = ({ children }) => {
       });
     }
   }
-  function addTransaction(transaction) {
+  async function addTransaction(transaction) {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
     dispatch({
       type: "ADD_TRANSACTION",
       payload: transaction,
