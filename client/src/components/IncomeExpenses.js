@@ -13,14 +13,10 @@ export const IncomeExpenses = () => {
       100) /
     100;
 
-  const expense =
-    (amounts
-      .filter((item) => item < 0)
-      .reduce((acc, item) => (acc += item), 0) *
-      -1 *
-      100) /
-    100;
-
+  const expense = (
+    amounts.filter((item) => item < 0).reduce((acc, item) => (acc += item), 0) *
+    -1
+  ).toFixed(2);
   const data = {
     labels: ["Income", "Expense"],
     datasets: [
