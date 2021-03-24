@@ -10,7 +10,7 @@ export const Balance = () => {
   const total = (amounts.reduce((acc, item) => (acc += item), 0) * 100) / 100;
   return (
     <>
-      <h4>Your Balance</h4>
+      <h4>Votre Solde</h4>
       <h1>{numberWithCommas(total)} € </h1>
     </>
   );
