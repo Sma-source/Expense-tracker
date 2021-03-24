@@ -18,10 +18,10 @@ export const IncomeExpenses = () => {
     -1
   ).toFixed(2);
   const data = {
-    labels: ["Income", "Expense"],
+    labels: ["Revenu", "Dépense"],
     datasets: [
       {
-        label: "IncomeExpense",
+        label: "RevenuDépense",
         data: [income, expense],
         backgroundColor: ["#2ecc71", "#c0392b"],
         borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
